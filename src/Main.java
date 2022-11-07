@@ -1,3 +1,4 @@
+import java.awt.event.HierarchyEvent;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -92,6 +93,13 @@ public class Main {
         System.out.println("All moons");
         for(HeavenlyBody moon : moons){
             System.out.println("\t" + moon.getName());
+        }
+
+        HeavenlyBody pluto = new HeavenlyBody("Pluto", 842);
+        planets.add(pluto);
+
+        for(HeavenlyBody planet : planets){
+            System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
         }
     }
 }
